@@ -21,4 +21,4 @@ sel = int(input('Введите число от 1 до 7: '))
 if 1<=sel<=7:
     print(f'{sel}-{week[sel]}')
 else:
-    sel = int(input('Введите число от 1 до 7!!!!: '))
+    sel = int(input('Число от 1 до 7!!!!!!: '))
