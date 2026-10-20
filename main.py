@@ -1,11 +1,6 @@
-import math
-
-z = float(input('Введите длину строки: '))
-h = z/ (2* math.tan(math.pi/5))
-s = 5 * (z *h/2)
-print(s)
-
-
+a = int(input('Введите длину стороны'))
+form = (a*2)
+print(form)
 
 week = {
     1:'Понедельник',
@@ -18,7 +13,6 @@ week = {
 
 }
 
-sel = int(input('Введите число от 1 до 7: '))
-print(f'{sel}-{week[sel]}')
-
+a = int(input('Введите число '))
+print(week[a])
 
