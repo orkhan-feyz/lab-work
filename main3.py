@@ -19,7 +19,7 @@ def val_word():
                 return word
             else:
                 print('Проверьте написание слова')
-        except:
+        except ValueError:
             print('Ошибка')
 
 
@@ -31,7 +31,7 @@ def val_text():
                 print('Текст не может быть пустым')
             else:
                 return text
-        except:
+        except ValueError:
             print('Ошибка')
 
 
@@ -57,7 +57,7 @@ for i in range(len(words_list)):
 
     if word == words_list[i]:
         c+=1
-
+print(f'Исходный текст: {text}')
 print(f'{word} встречается в тексте: {c}')
 
 
@@ -69,12 +69,13 @@ def val_stroka():
             stroka = input('Введите строку: ')
             if len(stroka) == 0:
                 print('Проверьте написание строки')
-            return stroka
-        except:
+            else:
+                return stroka
+        except ValueError:
             print('Ошибка')
 stroka = val_stroka()
 
-sym = 'qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмё'
+sym = 'qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмёитьбю'
 
 c = 0 
 for i in range(len(stroka)):
@@ -89,11 +90,11 @@ from random import randint
 def val_size():
     while True:
         try:
-            n = int(input('Введите размер списка N:'))
-            if n <= 0:
+            size = int(input('Введите размер списка N:'))
+            if size <= 0:
                 print('введите положительное число')
             else:
-                return n
+                return size
         except ValueError:
             print('Ошибка')
 def val_c():
@@ -108,12 +109,12 @@ size = val_size()
 n = [randint(-1000,1000) for _ in range(size)]
 c = val_c()
 
-summ = 0 
+count = 0 
 for i in range(len(n)):
     if c>n[i]:
-        summ += n[i]
+        count += 1
 
-print(f'Сумма эл меньше {c}: {summ}')
+print(f'Количество элементов меньше {c}: {count}')
 
 elements = []
 for i in range(len(n) - 1, -1, -1):
