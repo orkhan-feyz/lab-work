@@ -1,4 +1,5 @@
 # Лаба 5
+print('\nЗадание 3\n')
 def func_isalpha(s):
     bad_s = '0123456789 ,.!?-()[]{}<>_@#№$%^&*+=|\\/:"`~;'
     if not s or s == " " * len(s):
@@ -60,6 +61,8 @@ for i in range(len(words_list)):
 print(f'{word} встречается в тексте: {c}')
 
 
+print('\nЗадание 2\n')
+
 def val_stroka():
     while True:
         try:
@@ -81,7 +84,7 @@ for i in range(len(stroka)):
 print(f'Общее кол-во строчных лат и рус букв в строке: {c}')
 
 
-
+print('\nЗадание 3\n')
 from random import randint
 def val_size():
     while True:
