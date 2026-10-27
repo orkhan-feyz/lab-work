@@ -1,5 +1,7 @@
 # Лаба 5
+
 print('\nЗадание 1\n')
+
 def func_isalpha(s):
     bad_s = '0123456789 ,.!?-()[]{}<>_@#№$%^&*+=|\\/:"`~;'
     if not s or s == " " * len(s):
@@ -26,7 +28,7 @@ def val_word():
 def val_text():
     while True:
         try:
-            text = input('Введите текст')
+            text = input('Введите текст: ')
             if len(text) == 0:
                 print('Текст не может быть пустым')
             else:
@@ -73,6 +75,8 @@ def val_stroka():
                 return stroka
         except ValueError:
             print('Ошибка')
+
+
 stroka = val_stroka()
 
 sym = 'qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмёитьбю'
@@ -86,7 +90,9 @@ print(f'Общее кол-во строчных лат и рус букв в с�
 
 
 print('\nЗадание 3\n')
+
 from random import randint
+
 def val_size():
     while True:
         try:
@@ -97,6 +103,7 @@ def val_size():
                 return size
         except ValueError:
             print('Ошибка')
+            
 def val_c():
     while True:
         try:
@@ -104,9 +111,12 @@ def val_c():
             return c
         except ValueError:
             print('Ошибка')
+
             
 size = val_size()
+
 n = [randint(-1000,1000) for _ in range(size)]
+
 c = val_c()
 
 count = 0 
@@ -120,12 +130,90 @@ elements = []
 for i in range(len(n) - 1, -1, -1):
     if float(n[i]) >= 0:
         elements.append(int(n[i]))
-    else:
-        break
 
 summ = 0 
 for i in range(len(elements)):
     summ += elements[i]
 print(f'Сумма целых чисел от последнего отрицат: {summ}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
