@@ -41,7 +41,10 @@ text = val_text()
 word = val_word()
 
 words_list = []
+
 last_index = 0
+
+
 for i in range(len(text)):
     if len(words_list) >= 1 and text[i] == ' ':
         words_list.append(text[last_index:i])
@@ -116,6 +119,7 @@ def val_c():
 size = val_size()
 
 n = [randint(-1000,1000) for _ in range(size)]
+print(n)
 
 c = val_c()
 
@@ -126,14 +130,16 @@ for i in range(len(n)):
 
 print(f'Количество элементов меньше {c}: {count}')
 
-elements = []
-for i in range(len(n) - 1, -1, -1):
-    if float(n[i]) >= 0:
-        elements.append(int(n[i]))
+
+last_index = 0
+for i in range(size):
+    if n[i]<0:
+        last_index = i
 
 summ = 0 
-for i in range(len(elements)):
-    summ += elements[i]
+for i in range(last_index + 1, size):
+    summ += n[i] 
+
 print(f'Сумма целых чисел от последнего отрицат: {summ}')
 
 
