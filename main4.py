@@ -39,20 +39,18 @@ for row in matrix:
 print("Характеристики после сортировки:", [row[-1] for row in matrix])
 
 
-
-
-import random
-
-while True:
-    try:
-        n = int(input("Введите размер словаря: "))
-        if n > 0:
-            break
-        print("Ошибка! Размер должен быть > 0")
-    except ValueError:
-        print("Ошибка! Введите целое число")
+def size():
+    while True:
+        try:
+            n = int(input("Введите размер словаря: "))
+            if n > 0:
+                return n
+            print("Ошибка! Размер должен быть > 0")
+        except ValueError:
+            print("Ошибка! Введите целое число")
 
 d = {}
+n = size()
 for i in range(n):
     d["кл" + str(i + 1)] = random.randint(1, 100)
 
@@ -68,19 +66,26 @@ while True:
         print("Ошибка! Введите целое число")
 
 print("Словарь ДО:", d)
+
 d[new_k] = new_v
+
 print("Словарь ПОСЛЕ:", d)
 
-print("\n--- Поиск ---")
+print("\nПоиск")
+
 find_k = input("Введите ключ для поиска: ")
+
 if find_k in d:
     print("Значение:", d[find_k])
 else:
     print("Не найдено!")
 
 print("\nУдаление")
+
 del_k = input("Введите ключ для удаления: ")
+
 print("Словарь ДО:", d)
+
 if del_k in d:
     del d[del_k]
     print("Словарь ПОСЛЕ:", d)
